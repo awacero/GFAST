@@ -49,7 +49,22 @@ nproc
 make -j8
 sudo make install
 
-``` 
+```
+
+### Download, compile and install COMPEARTH
+
+``` bash
+cd
+mkdir instaladores && cd instaladores
+git clone https://github.com/awacero/compearth.git
+cd compearth/momenttensor/c_src/
+cmake .   -DCBLAS_LIBRARY=/usr/lib/x86_64-linux-gnu/libopenblas.so.0  
+make -j8
+sudo make install
+###Copy the compiled library to the system library folder. 
+sudo cp lib/libcompearth_shared.so /usr/local/lib/compearth/
+
+```
 
 
 ```bash

@@ -11,6 +11,7 @@
 # apt install libxml2-dev
 # apt install swig
 # apt install libiniparser-dev
+# apt install pkg-config
 
 
 

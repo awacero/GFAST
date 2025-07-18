@@ -74,12 +74,11 @@ $ mkdir instaladores && cd instaladores
 $ git clone https://github.com/awacero/GFAST.git
 $ mv GFAST gfast
 
+$ cmake .   -DCBLAS_LIBRARY=/usr/lib/x86_64-linux-gnu/libopenblas.so.0   -DGEOLIB_LIBRARY=/usr/local/lib/libGeographicLib.so  -DH5_LIBRARY=/usr/lib/x86_64-linux-gnu/hdf5/serial/libhdf5.so   -DH5_C_INCLUDE_DIR=/usr/include/hdf5/serial/  -DCOMPEARTH_INCLUDE_DIR=/usr/local/include/   -DCOMPEARTH_LIBRARY=/usr/local/lib/compearth/libcompearth_shared.so -DINIPARSER_INCLUDE_DIR=/usr/include/iniparser/ -DINIPARSER_LIBRARY=/usr/lib/x86_64-linux-gnu/libiniparser.so   -DLIBXML2_INCLUDE_DIR=/usr/include/libxml2   -DLIBXML2_LIBRARY=/usr/lib/x86_64-linux-gnu/libxml2.so
 
-cmake . -DCBLAS_LIBRARY=/usr/lib/x86_64-linux-gnu/libopenblas.so.0 -DGEOLIB_LIBRARY=/home/wilson/instaladores/geographiclib/build/src/libGeographicLib.so
-make -j8 VERBOSE=1
 
-cmake . -DCBLAS_LIBRARY=/usr/lib/x86_64-linux-gnu/libopenblas.so.0 -DGEOLIB_LIBRARY=/home/wilson/instaladores/geographiclib/build/src/libGeographicLib.so -DH5_LIBRARY=/usr/lib/x86_64-linux-gnu/hdf5/serial/libhdf5.so -DH5_C_INCLUDE_DIR=/usr/include/hdf5/serial/ -DINIPARSER_INCLUDE_DIR=/usr/include/iniparser/
+
 make -j$(nproc)
-
+make install 
 
 ```

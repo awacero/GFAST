@@ -1,7 +1,7 @@
 ## IG Installation 
 ### Install dependencies
 ``` bash
-# apt install git build-essential
+# apt install git build-essential cmake
 # apt install libblas-dev liblapack-dev libopenblas-dev libopenblas0 libopenblas64-dev
 # apt install liblapacke-dev libfftw3-dev
 # apt install gfortran libgfortran5 libgfortran-*-dev
@@ -20,20 +20,6 @@ find /usr/ -iname libCblas.so.\*
 find /usr/ -iname libcblas.\*
 ```
 
-### Download, compile and install ISCL library
-
-``` bash
-$ cd
-$ mkdir instaladores && cd instaladores
-$ git clone https://gitlab.isti.com/bbaker/iscl
-$ cd iscl/
-$ mkdir build && cd build
-$ cmake ..
-$ make -j2
-$ sudo make install 
-
-```
-
 ### Download, compile and install GEOGRAPHICLIB
 
 ```bash
@@ -47,6 +33,26 @@ make -j8
 sudo make install
 
 ```
+
+### Download, compile and install ISCL library
+
+``` bash
+$ cd
+$ mkdir instaladores && cd instaladores
+$ git clone https://gitlab.isti.com/bbaker/iscl
+$ cd iscl/
+$ mkdir build && cd build
+##Agregar la referencia a la librería compilada antes. 
+$ cmake .. \
+  -DGEOLIB_LIBRARY=/usr/local/lib/libGeographicLib.so \
+  -DGEOLIB_INCLUDE_DIR=/usr/local/include
+
+$ make -j8
+$ sudo make install 
+
+```
+
+
 
 ### Download, compile and install COMPEARTH
 

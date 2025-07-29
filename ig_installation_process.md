@@ -69,13 +69,14 @@ sudo cp lib/libcompearth_shared.so /usr/local/lib/compearth/
 
 ```
 
+## Download, compile and install GFAST
 
 ```bash
 $ cd
 $ mkdir instaladores && cd instaladores
 $ git clone https://github.com/awacero/GFAST.git
 $ mv GFAST gfast
-
+$ cd gfast
 $ cmake .   -DCBLAS_LIBRARY=/usr/lib/x86_64-linux-gnu/libopenblas.so.0   -DGEOLIB_LIBRARY=/usr/local/lib/libGeographicLib.so  -DH5_LIBRARY=/usr/lib/x86_64-linux-gnu/hdf5/serial/libhdf5.so   -DH5_C_INCLUDE_DIR=/usr/include/hdf5/serial/  -DCOMPEARTH_INCLUDE_DIR=/usr/local/include/   -DCOMPEARTH_LIBRARY=/usr/local/lib/compearth/libcompearth_shared.so -DINIPARSER_INCLUDE_DIR=/usr/include/iniparser/ -DINIPARSER_LIBRARY=/usr/lib/x86_64-linux-gnu/libiniparser.so   -DLIBXML2_INCLUDE_DIR=/usr/include/libxml2   -DLIBXML2_LIBRARY=/usr/lib/x86_64-linux-gnu/libxml2.so
 
 

@@ -1,17 +1,13 @@
 ## IG Installation 
 ### Install dependencies
 ``` bash
-# apt install git
-# apt install build-essential 
+# apt install git build-essential
 # apt install libblas-dev liblapack-dev libopenblas-dev libopenblas0 libopenblas64-dev
-# apt install liblapacke-dev
-# apt install libfftw3-dev 
+# apt install liblapacke-dev libfftw3-dev
 # apt install gfortran libgfortran5 libgfortran-*-dev
-# apt install libhdf5-dev
-# apt install libxml2-dev
-# apt install swig
-# apt install libiniparser-dev
-# apt install pkg-config
+# apt install libhdf5-dev libxml2-dev
+# apt install libiniparser-dev pkg-config
+### apt install swig
 
 
 
